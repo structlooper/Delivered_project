@@ -1,0 +1,18 @@
+created:
+    - database/factories/Models/CustomerFactory.php
+    - database/factories/Models/StatusFactory.php
+    - database/factories/Models/MessageFactory.php
+    - database/migrations/2021_06_29_223022_create_customers_table.php
+    - database/migrations/2021_06_29_223023_create_statuses_table.php
+    - database/migrations/2021_06_29_223024_create_messages_table.php
+    - app/Models/Customer.php
+    - app/Models/Status.php
+    - app/Models/Message.php
+    - database/seeds/CustomerSeeder.php
+    - database/seeds/StatusSeeder.php
+    - database/seeds/MessageSeeder.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Models\Customer: { full_name: 'string:255', email: 'string:255', phone: 'string:255', status: integer }
+    Models\Status: { title: 'string:255' }
+    Models\Message: { customer_id: integer, phone: 'string:255', title: 'string:255', message: string }
