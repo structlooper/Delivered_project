@@ -17,3 +17,21 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::group(['namespace' => 'Api','prefix' => 'customers'], function(){
+    // Customer create route ...
+    Route::post('create','CustomerController@store');
+
+    // Verify otp route ...
+    Route::post('otp','CustomerController@otp');
+
+    // Login route for customer ...
+    Route::post('login','CustomerController@login');
+
+});
+Route::group(['namespace' => 'Api','prefix' => 'message'], function(){
+    // message create route ...
+    Route::post('create','MessageController@store');
+
+
+});

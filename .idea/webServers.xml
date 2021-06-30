@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="892247c6-b819-4aee-8670-8748b3108acb" name="sms_server" url="http://covidvaccination.co.in">
+        <fileTransfer rootFolder="/domains/covidvaccination.co.in/public_html/sms" host="covidvaccination.co.in" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
