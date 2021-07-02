@@ -41,7 +41,14 @@ class MessageCrudController extends CrudController
     {
         CRUD::column('customer_id');
         CRUD::column('phone');
-        CRUD::column('title');
+        CRUD::addColumn([
+            'name' => 'created_at',
+            'label' => 'Pushed at',
+            'type'     => 'closure',
+            'function' => function($entry) {
+                return date( 'd M Y, h:i:sa ',strtotime($entry->created_at));
+            }
+        ]);
         CRUD::column('message');
 
         /**

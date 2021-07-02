@@ -41,7 +41,7 @@ class MessageController extends Controller
         $input = $request->all();
         $validator = Validator::make($input, [
             'phone' => 'required|numeric|digits_between:10,10',
-            'title' => 'required|max:255',
+//            'title' => 'required|max:255',
             'message' => 'required'
         ]);
 
